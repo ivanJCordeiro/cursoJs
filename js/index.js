@@ -12,5 +12,5 @@ while(texto !="salir"){
     } else {
         alert("Ponganse en contacto con nosotros en la pestaña Contacto")
     };
-    texto = prompt("Busacas informacion, ejemplos, entrenamiento o consejos? (para cerrar la ventana escriba: salir): ");
+    texto = prompt("Buscas informacion, ejemplos, entrenamiento o consejos? (para cerrar la ventana escriba: salir): ");
 }
