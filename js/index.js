@@ -1,3 +1,13 @@
+function saludo() {
+    alert("Bienvenidos a RutiNow, a continuacion les dejaremos una breve guia: ");
+}
+
+function despedida(){
+    alert("Gracias por visitar nuestro sitio");
+}
+
+saludo();
+
 let texto= prompt("buscas informacion, ejemplos, entrenamiento o consejos?: ");
 
 while(texto !="salir"){ 
@@ -14,3 +24,5 @@ while(texto !="salir"){
     };
     texto = prompt("Buscas informacion, ejemplos, entrenamiento o consejos? (para cerrar la ventana escriba: salir): ");
 }
+
+despedida();
