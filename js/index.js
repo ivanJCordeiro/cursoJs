@@ -25,4 +25,23 @@ while(texto !="salir"){
     texto = prompt("Buscas informacion, ejemplos, entrenamiento o consejos? (para cerrar la ventana escriba: salir): ");
 }
 
+let repeticiones = Number(prompt("Ingrese numero de repeticiones: "));
+let kilos = Number(prompt("Ingrese carga MAXIMA alcanzada: "));
+
+const calculadora =(rep, kg) =>{
+    if ( rep <= 2){
+        return kg * 1;
+    }else if ((rep > 2) && (rep < 6)){
+        return kg * 0.95;
+    }else if ((rep >= 6) && (rep <= 8)){
+        return kg * 0.85;
+    }else if ((rep > 8) && (rep <= 12)){
+        return kg * 0.75;
+    }else{
+        return kg * 0.70;
+    }
+}
+
+console.log(calculadora(repeticiones, kilos));
+
 despedida();
