@@ -1871,6 +1871,76 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    class Ejercicio{
+      constructor (nombre, musculo, dificultad, orden){
+          this.nombre = nombre;
+          this.musculo = musculo;
+          this.dificultad = dificultad;
+          this.orden = orden;
+      }
+    }
+
+
+    const Ejercicios = [{nombre: "remo Horizontal", musculo: "espalda", dificultad:"baja" , orden: "1"},
+                      {nombre: "serrucho con mancuerna", musculo: "espalda", dificultad:"media" , orden: "1"},
+                      {nombre: "press de  Banca", musculo: "pecho", dificultad:"media" , orden: "2"},
+                      {nombre: "cruces de Poleas", musculo: "pecho", dificultad:"alta" , orden: "2"},
+                      {nombre: "sentadilla libre", musculo: "cuadricep",dificultad:"media" , orden: "3"},
+                      {nombre: "estocadas con mancuernas",musculo:  "cuadriceps", dificultad:"media" , orden: "3"},
+                      {nombre: "peso Muerto", musculo: "femorales", dificultad:"media" , orden: "4"},
+                      {nombre: "hipThrust", musculo: "gluteos", dificultad:"media" , orden: "4"},
+                      {nombre: "press Militar", musculo: "hombro", dificultad:"media" , orden: "5"},
+                      {nombre: "vuelo lateral", musculo: "hombro" , dificultad:"baja" , orden: "5"},
+                      {nombre: "curl bicep con barra", musculo: "biceps", dificultad:"baja" , orden: "6"},
+                      {nombre: "curl concentrado", musculo: "biceps", dificultad:"baja" , orden: "6"},
+                      {nombre: "extension con soga", musculo: "triceps", dificultad:"media" , orden: "7"},
+                      {nombre: "skullcrasher", musculo: "triceps", dificultad:"alta" , orden: "7"}];
+
+    let musculosinput = prompt("Ingrese un orden (1 al 7) o dificultad deseada: ");
+    let filtroMusc = Ejercicios.filter((Ejercicios)=> Ejercicios.orden.includes(musculosinput));
+    let filtroDif = Ejercicios.filter((Ejercicios)=> Ejercicios.dificultad.includes(musculosinput));
+
+    function busqueda (){
+        switch(musculosinput){
+                    case "1":
+                        console.log(filtroMusc);
+                        break;
+                    case "2":
+                        console.log(filtroMusc);
+                        break;
+                    case "3":
+                        console.log(filtroMusc);
+                        break;
+                    case "4":
+                        console.log(filtroMusc);
+                        break;
+                    case "5":
+                        console.log(filtroMusc);
+                        break;
+                    case "6":
+                        console.log(filtroMusc);
+                        break;
+                    case "7":
+                        console.log(filtroMusc);
+                        break;
+                    case "baja":
+                        console.log(filtroDif);
+                        break;       
+                    case "media":
+                        console.log(filtroDif);
+                        break;       
+                    case "alta":
+                        console.log(filtroDif);
+                        break
+                    default:
+                        musculosinput = prompt("Ingrese otro orden (1 al 7) o dificultad: ");
+                        break;
+        }
+    }
+
+    busqueda();
   </script>    
 </body>
 </html>
