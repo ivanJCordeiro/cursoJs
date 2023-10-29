@@ -47,63 +47,62 @@
 // despedida();
 
 //FILTRO
-class Ejercicio{
-    constructor (nombre, musculo, dificultad, orden){
-        this.nombre = nombre;
-        this.musculo = musculo;
-        this.dificultad = dificultad;
-        this.orden = orden;
-    }
-  }
+// class Ejercicio{
+//     constructor (nombre, musculo, dificultad, orden){
+//         this.nombre = nombre;
+//         this.musculo = musculo;
+//         this.dificultad = dificultad;
+//         this.orden = orden;
+//     }
+//   }
 
 
-  const Ejercicios = [{nombre: "remo Horizontal", musculo: "espalda", dificultad:"baja" , orden: "1"},
-                    {nombre: "serrucho con mancuerna", musculo: "espalda", dificultad:"media" , orden: "1"},
-                    {nombre: "press de  Banca", musculo: "pecho", dificultad:"media" , orden: "2"},
-                    {nombre: "cruces de Poleas", musculo: "pecho", dificultad:"alta" , orden: "2"},
-                    {nombre: "sentadilla libre", musculo: "cuadricep",dificultad:"media" , orden: "3"},
-                    {nombre: "estocadas con mancuernas",musculo:  "cuadriceps", dificultad:"media" , orden: "3"},
-                    {nombre: "peso Muerto", musculo: "femorales", dificultad:"media" , orden: "4"},
-                    {nombre: "hipThrust", musculo: "gluteos", dificultad:"media" , orden: "4"},
-                    {nombre: "press Militar", musculo: "hombro", dificultad:"media" , orden: "5"},
-                    {nombre: "vuelo lateral", musculo: "hombro" , dificultad:"baja" , orden: "5"},
-                    {nombre: "curl bicep con barra", musculo: "biceps", dificultad:"baja" , orden: "6"},
-                    {nombre: "curl concentrado", musculo: "biceps", dificultad:"baja" , orden: "6"},
-                    {nombre: "extension con soga", musculo: "triceps", dificultad:"media" , orden: "7"},
-                    {nombre: "skullcrasher", musculo: "triceps", dificultad:"alta" , orden: "7"}];
+//   const Ejercicios = [{nombre: "remo Horizontal", musculo: "espalda", dificultad:"baja" , orden: "1"},
+//                     {nombre: "serrucho con mancuerna", musculo: "espalda", dificultad:"media" , orden: "1"},
+//                     {nombre: "press de  Banca", musculo: "pecho", dificultad:"media" , orden: "2"},
+//                     {nombre: "cruces de Poleas", musculo: "pecho", dificultad:"alta" , orden: "2"},
+//                     {nombre: "sentadilla libre", musculo: "cuadricep",dificultad:"media" , orden: "3"},
+//                     {nombre: "estocadas con mancuernas",musculo:  "cuadriceps", dificultad:"media" , orden: "3"},
+//                     {nombre: "peso Muerto", musculo: "femorales", dificultad:"media" , orden: "4"},
+//                     {nombre: "hipThrust", musculo: "gluteos", dificultad:"media" , orden: "4"},
+//                     {nombre: "press Militar", musculo: "hombro", dificultad:"media" , orden: "5"},
+//                     {nombre: "vuelo lateral", musculo: "hombro" , dificultad:"baja" , orden: "5"},
+//                     {nombre: "curl bicep con barra", musculo: "biceps", dificultad:"baja" , orden: "6"},
+//                     {nombre: "curl concentrado", musculo: "biceps", dificultad:"baja" , orden: "6"},
+//                     {nombre: "extension con soga", musculo: "triceps", dificultad:"media" , orden: "7"},
+//                     {nombre: "skullcrasher", musculo: "triceps", dificultad:"alta" , orden: "7"}];
 
-  let musculosinput = document.getElementById("formNav");
-  let boton = document.getElementsByClassName("btnFiltro");
-  let filtroMusc = Ejercicios.filter((Ejercicios)=> Ejercicios.orden.includes(musculosinput));
-  let filtroDif = Ejercicios.filter((Ejercicios)=> Ejercicios.dificultad.includes(musculosinput));
+//   let musculosinput = document.getElementById("formNav");
+//   let boton = document.getElementsByClassName("btnFiltro");
+//   let filtroMusc = Ejercicios.filter((Ejercicios)=> Ejercicios.orden.includes(musculosinput));
+//   let filtroDif = Ejercicios.filter((Ejercicios)=> Ejercicios.dificultad.includes(musculosinput));
 
-  function busqueda (e) {
-     e.preventDefault();
-    if(musculosinput === "1" || musculosinput === "2" || musculosinput === "3" || musculosinput === "4" || musculosinput === "5" || musculosinput === "6" || musculosinput === "7"){
-        let ejerciciosNombreMsg = "";
-        filtroMusc.forEach((el) => {
-            ejerciciosNombreMsg += `${ el.nombre }\n`
-        })
-        alert(ejerciciosNombreMsg);
-    } else if (musculosinput === "baja" || musculosinput === "media" || musculosinput === "alta") {
-        let ejerciciosDifMsg = "";
-        filtroDif.forEach ((el) => {
-            ejerciciosDifMsg += `${el.nombre}\n`
-        })
-        alert(ejerciciosDifMsg);
-    }
-  }
+//   function busqueda (e) {
+//      e.preventDefault();
+//     if(musculosinput === "1" || musculosinput === "2" || musculosinput === "3" || musculosinput === "4" || musculosinput === "5" || musculosinput === "6" || musculosinput === "7"){
+//         let ejerciciosNombreMsg = "";
+//         filtroMusc.forEach((el) => {
+//             ejerciciosNombreMsg += `${ el.nombre }\n`
+//         })
+//         alert(ejerciciosNombreMsg);
+//     } else if (musculosinput === "baja" || musculosinput === "media" || musculosinput === "alta") {
+//         let ejerciciosDifMsg = "";
+//         filtroDif.forEach ((el) => {
+//             ejerciciosDifMsg += `${el.nombre}\n`
+//         })
+//         alert(ejerciciosDifMsg);
+//     }
+//   }
 
 
-  musculosinput.addEventListener("submit", busqueda);
+//   musculosinput.addEventListener("submit", busqueda);
 
   //FORMULARIO
-  let inputFormulario = document.getElementsByClassName("formInput")
-  let btn = document.getElementById("btnSub")
-  btn.onclick = validarForm();
+  let inputFormulario = document.getElementsByClassName("formulario")
+  let inputForm = document.getElementById("formInput")
+  inputFormulario.onclick = validarForm();
 
   function validarForm(e){
     e.preventDefault();
-    inputFormulario = e.target.value;
     alert ("Formulario enviado! Muchas gracias");
   }
