@@ -98,11 +98,17 @@
 //   musculosinput.addEventListener("submit", busqueda);
 
   //FORMULARIO
-  let inputFormulario = document.getElementsByClassName("formulario")
-  let inputForm = document.getElementById("formInput")
-  inputFormulario.onclick = validarForm();
+  let inputFormulario = document.getElementById("formulario");
+  
+  inputFormulario.addEventListener("submit", validarForm);
 
   function validarForm(e){
     e.preventDefault();
+
     alert ("Formulario enviado! Muchas gracias");
+
+    let resetBtn = document.getElementById("btnRes");
+
+    resetBtn.click();
   }
+

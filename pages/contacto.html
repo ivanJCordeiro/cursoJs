@@ -59,46 +59,30 @@
   <!-- MAIN -->
   <main class="container-fluid mainH">
     <div data-aos="flip-left" class="container-fluid">
-        <section>
           <form id="formulario" method="get" enctype="multipart/form-data">
-            <div class="container-fluid mt-5 rounded bgContacto w-50">
-              <div class="my-3">
+            <div class="container-fluid mt-5 rounded bgContacto w-50 mb-5" >
                 <label for="nombreYapellido" class="form-label fs-4 fw-semibold text-black">Nombre y Apellido</label>
                 <input type="text" class="form-control formInput" id="nombreYapellido">
-              </div>
-              <div class="my-3">
                 <label for="edad" class="form-label fs-4 fw-semibold text-black">Edad</label>
                 <input type="number" class="form-control formInput" id="edad">
-              </div>
-              <div class="my-3 ">
                 <label for="exampleInputEmail" class="form-label fs-4 fw-semibold text-black">Email</label>
                 <input type="email" class="form-control formInput" id="exampleInputEmail" aria-describedby="emailHelp">
-              </div>
-              <div class="my-3">
                 <label for="peso" class="form-label fs-4 fw-semibold text-black">Peso</label>
                 <input type="number" class="form-control formInput" id="peso">
-              </div>
-              <div class="my-3">
                 <label for="sesiones" class="form-label fs-4 fw-semibold text-black">Sesiones por semana</label>
                 <input type="number" class="form-control formInput" id="sesiones">
-              </div>
-              <div class="my-3">
                 <label for="objetivo" class="form-label fs-4 fw-semibold text-black">Objetivo</label>
-                <textarea class="form-control formInput" id="objetivo" rows="3"></textarea>
-              </div>         
-              <div class="my-3">
-                  <label for="masculino" class="form-label fs-4 fw-semibold text-black">Masculino</label>
-                  <input type="radio" name="Genero" id="masculino">
-                  <label for="femenino" class="form-label fs-4 fw-semibold text-black">Femenino</label>
-                  <input type="radio" name="Genero" id="femenino">
-              </div>        
-              <div class="my-3">
-                <input type="submit" id="btnSub" class="btn btn-danger border border-black" value="Enviar">
-                <input type="reset" id="btnRes" class="btn btn-danger border border-black" value="Reset">
-              </div>
+                <textarea class="form-control formInput" id="objetivo" rows="3"></textarea>       
+                <label for="masculino" class="form-label fs-4 fw-semibold text-black">Masculino</label>
+                <input type="radio" name="Genero" id="masculino">
+                <label for="femenino" class="form-label fs-4 fw-semibold text-black">Femenino</label>
+                <input type="radio" name="Genero" id="femenino"> 
+                <div class="d-flex justify-content-center">      
+                  <input type="submit" id="btnSub" class="btn btn-danger border border-black" value="Enviar">
+                  <input type="reset" id="btnRes" class="btn btn-danger border border-black" value="Resetear">
+                </div>
             </div>
           </form>
-        </section>
     </div>
   </main>  
   <!-- FOOTER -->
