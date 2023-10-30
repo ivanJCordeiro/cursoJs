@@ -47,10 +47,6 @@
                <a class="nav-link active fw-bold" href="./contacto.html">Contacto</a>
               </li>
             </ul>
-            <form class="d-flex pe-2" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn botonBrown" type="submit">Buscar</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -58,6 +54,14 @@
   </header>
   <!-- MAIN -->
   <main class="container-fluid mainH">
+    <div class="d-flex my-3 py-3 justify-content-center">
+      <form id="calculadoraRm" action="#" method="get" enctype="multipart/form-data">
+        <input type="text" id="rm" placeholder="Ingrese la RM en kg">
+        <input type="text" id="reps" placeholder="Cantidad de reps">
+        <button id="salidaBtn">Calcular</button>
+        <input type="text" id="resultado" value="">
+      </form>
+    </div>
     <div class="row">
         <!-- TABLA PRINCIPIANTE -->
       <div class="row d-flex container-fluid">

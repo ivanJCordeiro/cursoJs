@@ -1,114 +1,115 @@
-// function saludo() {
-//     alert("Bienvenidos a RutiNow, a continuacion les dejaremos una breve guia: ");
-// }
+//FORMULARIO
 
-// function despedida(){
-//     alert("Gracias por visitar nuestro sitio");
-// }
+// //INVOCACION FORMULARIO
+let inputFormulario = document.getElementById("formulario");
 
-// saludo();
+//UNICA FUNCION QUE SE EJECUTA CORRECTAMENTE
 
-// let texto= prompt("buscas informacion, ejemplos, entrenamiento o consejos?: ");
+inputFormulario.addEventListener("submit", validarForm);
 
-// while(texto !="salir"){ 
-//     if (texto === "informacion"){
-//         alert("vaya a la pestaña Inicio")
-//     } else if ( texto === "ejemplos"){
-//         alert("Vaya a la pestaña Ejercicios")
-//     } else if (texto === "entrenamiento"){
-//         alert("Vaya a la pestaña Rutinas")
-//     } else if (texto === "consejos"){
-//         alert("Vaya a la pestaña alimentacion")
-//     } else {
-//         alert("Ponganse en contacto con nosotros en la pestaña Contacto")
-//     };
-//     texto = prompt("Buscas informacion, ejemplos, entrenamiento o consejos? (para cerrar la ventana escriba: salir): ");
-// }
+function validarForm(e){
+  e.preventDefault();
 
-// let repeticiones = Number(prompt("Ingrese numero de repeticiones: "));
-// let kilos = Number(prompt("Ingrese carga MAXIMA alcanzada: "));
+  alert ("Formulario enviado! Muchas gracias");
 
-// const calculadora =(rep, kg) =>{
-//     if ( rep <= 2){
-//         return kg * 1;
-//     }else if ((rep > 2) && (rep < 6)){
-//         return kg * 0.95;
-//     }else if ((rep >= 6) && (rep <= 8)){
-//         return kg * 0.85;
-//     }else if ((rep > 8) && (rep <= 12)){
-//         return kg * 0.75;
-//     }else{
-//         return kg * 0.70;
-//     }
-// }
+  let resetBtn = document.getElementById("btnRes");
 
-// console.log(calculadora(repeticiones, kilos));
-
-// despedida();
-
-//FILTRO
-// class Ejercicio{
-//     constructor (nombre, musculo, dificultad, orden){
-//         this.nombre = nombre;
-//         this.musculo = musculo;
-//         this.dificultad = dificultad;
-//         this.orden = orden;
-//     }
-//   }
+  resetBtn.click();
+}
 
 
-//   const Ejercicios = [{nombre: "remo Horizontal", musculo: "espalda", dificultad:"baja" , orden: "1"},
-//                     {nombre: "serrucho con mancuerna", musculo: "espalda", dificultad:"media" , orden: "1"},
-//                     {nombre: "press de  Banca", musculo: "pecho", dificultad:"media" , orden: "2"},
-//                     {nombre: "cruces de Poleas", musculo: "pecho", dificultad:"alta" , orden: "2"},
-//                     {nombre: "sentadilla libre", musculo: "cuadricep",dificultad:"media" , orden: "3"},
-//                     {nombre: "estocadas con mancuernas",musculo:  "cuadriceps", dificultad:"media" , orden: "3"},
-//                     {nombre: "peso Muerto", musculo: "femorales", dificultad:"media" , orden: "4"},
-//                     {nombre: "hipThrust", musculo: "gluteos", dificultad:"media" , orden: "4"},
-//                     {nombre: "press Militar", musculo: "hombro", dificultad:"media" , orden: "5"},
-//                     {nombre: "vuelo lateral", musculo: "hombro" , dificultad:"baja" , orden: "5"},
-//                     {nombre: "curl bicep con barra", musculo: "biceps", dificultad:"baja" , orden: "6"},
-//                     {nombre: "curl concentrado", musculo: "biceps", dificultad:"baja" , orden: "6"},
-//                     {nombre: "extension con soga", musculo: "triceps", dificultad:"media" , orden: "7"},
-//                     {nombre: "skullcrasher", musculo: "triceps", dificultad:"alta" , orden: "7"}];
 
-//   let musculosinput = document.getElementById("formNav");
-//   let boton = document.getElementsByClassName("btnFiltro");
-//   let filtroMusc = Ejercicios.filter((Ejercicios)=> Ejercicios.orden.includes(musculosinput));
-//   let filtroDif = Ejercicios.filter((Ejercicios)=> Ejercicios.dificultad.includes(musculosinput));
+//CALCULADORA (ERROR)
 
-//   function busqueda (e) {
-//      e.preventDefault();
-//     if(musculosinput === "1" || musculosinput === "2" || musculosinput === "3" || musculosinput === "4" || musculosinput === "5" || musculosinput === "6" || musculosinput === "7"){
-//         let ejerciciosNombreMsg = "";
-//         filtroMusc.forEach((el) => {
-//             ejerciciosNombreMsg += `${ el.nombre }\n`
-//         })
-//         alert(ejerciciosNombreMsg);
-//     } else if (musculosinput === "baja" || musculosinput === "media" || musculosinput === "alta") {
-//         let ejerciciosDifMsg = "";
-//         filtroDif.forEach ((el) => {
-//             ejerciciosDifMsg += `${el.nombre}\n`
-//         })
-//         alert(ejerciciosDifMsg);
-//     }
-//   }
+// //INVOCO BOTON DE TOTAL
+let salida = document.getElementById("salidaBtn");
+
+salida.onclick = calculadora;
+//NO SE EJECUTA LA FUNCION
+function calculadora () {
+    //NO ME TOMA LOS VALUE, POR QUE?
+    const rm = parseFloat(document.getElementById("rm").value);
+    const reps = parseFloat(document.getElementById("reps").value);
+    let resultado ;
+
+    if ( reps <= 2){
+        resultado = rm * 1;
+    }else if ((reps > 2) && (reps < 6)){
+        resultado = rm * 0.95;
+    }else if ((reps >= 6) && (reps <= 8)){
+        resultado = rm * 0.85;
+    }else if ((reps > 8) && (reps <= 12)){
+        resultado = rm * 0.75;
+    }else{
+        resultado = rm * 0.70;
+    }
+    //NO IMPRIME EL RESULTADO EN EL INPUT
+    document.getElementById("resultado").innerHTML = resultado;
+};
 
 
-//   musculosinput.addEventListener("submit", busqueda);
+//GUARDA LA CLAVE PERO NO EL VALOR EN EL SESSION STORAGE, DONDE ESTA EL ERROR?
+//STORAGE
 
-  //FORMULARIO
-  let inputFormulario = document.getElementById("formulario");
+let nombreYApellido = document.getElementById("nombreYapellido");
+let edad = document.getElementById("edad");
+let email = document.getElementById("exampleInputEmail");
+let peso = document.getElementById("peso");
+let sesiones = document.getElementById("sesiones");
+let objetivo = document.getElementById("objetivo");
+
+sessionStorage.setItem("nombreCompleto" , nombreYApellido.value);
+sessionStorage.setItem("edad", edad.value);
+sessionStorage.setItem("email", email.value);
+sessionStorage.setItem("peso", peso.value);
+sessionStorage.setItem("sesiones", sesiones.value);
+sessionStorage.setItem("objetivo", objetivo.value);
+
+
+//ARRAY DE ALUMNOS
+let infoAlumno = {}
+
+infoAlumno.nombreCompleto = sessionStorage.getItem("nombreCompleto");
+infoAlumno.edad = parseInt(sessionStorage.getItem("edad"));
+infoAlumno.email = sessionStorage.getItem("email");
+infoAlumno.peso = parseInt(sessionStorage.getItem("peso"));
+infoAlumno.sesiones = parseInt(sessionStorage.getItem("sesiones"));
+infoAlumno.objetivo = sessionStorage.getItem("objetivo");
+
+//BOTON QUE GUARDA LA INFO DEL FORM EN EL SESSION STORAGE
+let btnGuardar = document.getElementById("btnGuardar");
+
+// FUNCION DE GUARDADO DEL ARRAY EN EL STORAGE
+btnGuardar.onclick = (e) => {
+  e.preventDefault();
+  let infoAlumno = {}
   
-  inputFormulario.addEventListener("submit", validarForm);
+  let nombreYApellido = document.getElementById("nombreYapellido");
+  let edad = document.getElementById("edad");
+  let email = document.getElementById("exampleInputEmail");
+  let peso = document.getElementById("peso");
+  let sesiones = document.getElementById("sesiones");
+  let objetivo = document.getElementById("objetivo");
 
-  function validarForm(e){
-    e.preventDefault();
+  sessionStorage.setItem("nombreCompleto" , nombreYApellido.value);
+  sessionStorage.setItem("edad", edad.value);
+  sessionStorage.setItem("email", email.value);
+  sessionStorage.setItem("peso", peso.value);
+  sessionStorage.setItem("sesiones", sesiones.value);
+  sessionStorage.setItem("objetivo", objetivo.value);
 
-    alert ("Formulario enviado! Muchas gracias");
-
-    let resetBtn = document.getElementById("btnRes");
-
-    resetBtn.click();
+  let arrayPush = {
+   nombre: nombreYApellido.value,
+   edad: edad.value,
+   email: email.value,
+   peso: peso.value,
+   sesiones: sesiones.value,
+   objetivo: objetivo.value
   }
 
+  infoAlumno.push(arrayPush);
+
+  sessionStorage.getItem("infoAlumno", JSON.stringify(infoAlumno));
+}
+
+//LOS addEventListener ME LOS TOMA TODOS CON ERRORES ¿?
