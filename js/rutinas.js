@@ -25,7 +25,8 @@ function calculadora (e) {
     }else{
         resultado = rm * 0.70;
     }
-    alert("El peso recomendado es : " + resultado);
+    alert("El peso recomendado es : " + resultado + "Kg");
+    
     //NO IMPRIME EL RESULTADO EN EL INPUT, AGREGO .VALUE?
     resultado = document.getElementById("resultado").innerHTML.value;
 };
