@@ -1,4 +1,4 @@
-//CALCULADORA (ERROR)
+//CALCULADORA
 
 document.getElementById("calculadoraRM");
 
@@ -25,9 +25,7 @@ function calculadora (e) {
     }else{
         resultado = rm * 0.70;
     }
-    alert("El peso recomendado es : " + resultado + "Kg");
-    
-    //NO IMPRIME EL RESULTADO EN EL INPUT, AGREGO .VALUE?
-    resultado = document.getElementById("resultado").innerHTML.value;
+   
+    document.getElementById("resultado").value = "el peso es: " +  resultado + "Kg";
 };
 

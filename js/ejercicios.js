@@ -22,12 +22,12 @@ class Ejercicio{
                     {nombre: "extension con soga", musculo: "triceps", dificultad:"media"},
                     {nombre: "skullcrasher", musculo: "triceps", dificultad:"alta"}];
 
-
+  
   document.getElementById("busqueda");
-  let musculosinput = document.getElementById("busquedaInput");
-  let boton = document.getElementsByClassName("busquedaBoton");
-  let filtroMusc = Ejercicios.filter((Ejercicios)=> Ejercicios.musculo.includes(musculosinput));
-  let filtroDif = Ejercicios.filter((Ejercicios)=> Ejercicios.dificultad.includes(musculosinput));
+  const musculosinput = document.getElementById("busquedaInput");
+  const boton = document.getElementsByClassName("busquedaBoton");
+  const filtroMusc = Ejercicios.filter((Ejercicios)=> Ejercicios.musculo.includes(musculosinput));
+  const filtroDif = Ejercicios.filter((Ejercicios)=> Ejercicios.dificultad.includes(musculosinput));
   
   boton.onclick = busqueda ;
   
@@ -48,6 +48,8 @@ class Ejercicio{
             ejerciciosDifMsg += `${el.nombre}\n`
         })
         alert(ejerciciosDifMsg);
+    } else {
+        alert("Ingrese un valor valido");
     }
   }
 
