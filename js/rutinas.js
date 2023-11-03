@@ -26,6 +26,6 @@ function calculadora (e) {
         resultado = rm * 0.70;
     }
    
-    document.getElementById("resultado").value = "el peso es: " +  resultado + "Kg";
+    document.getElementById("resultado").value = "recomendacion: " +  resultado + "Kg";
 };
 

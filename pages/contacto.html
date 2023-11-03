@@ -58,17 +58,17 @@
           <form id="formulario" method="get" enctype="multipart/form-data">
             <div class="container-fluid mt-5 rounded bgContacto w-50 mb-5" >
                 <label for="nombreYapellido" class="form-label fs-4 fw-semibold text-black">Nombre y Apellido</label>
-                <input type="text" class="form-control formInput" id="nombreYapellido">
+                <input type="text" class="form-control formInput" id="nombreYapellido" required>
                 <label for="edad" class="form-label fs-4 fw-semibold text-black">Edad</label>
                 <input type="number" class="form-control formInput" id="edad">
                 <label for="exampleInputEmail" class="form-label fs-4 fw-semibold text-black">Email</label>
-                <input type="email" class="form-control formInput" id="exampleInputEmail" aria-describedby="emailHelp">
+                <input type="email" class="form-control formInput" id="exampleInputEmail" aria-describedby="emailHelp" required>
                 <label for="peso" class="form-label fs-4 fw-semibold text-black">Peso</label>
                 <input type="number" class="form-control formInput" id="peso">
                 <label for="sesiones" class="form-label fs-4 fw-semibold text-black">Sesiones por semana</label>
-                <input type="number" class="form-control formInput" id="sesiones">
+                <input type="number" class="form-control formInput" id="sesiones" required >
                 <label for="objetivo" class="form-label fs-4 fw-semibold text-black">Objetivo</label>
-                <textarea class="form-control formInput" id="objetivo" rows="3"></textarea>       
+                <textarea class="form-control formInput" id="objetivo" rows="3" required></textarea>       
                 <label for="masculino" class="form-label fs-4 fw-semibold text-black">Masculino</label>
                 <input type="radio" name="Genero" id="masculino">
                 <label for="femenino" class="form-label fs-4 fw-semibold text-black">Femenino</label>
@@ -103,6 +103,7 @@
   <script>
     AOS.init();
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src = "../js/formulario.js">
   </script>
 </body>

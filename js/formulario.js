@@ -9,8 +9,14 @@ inputFormulario.addEventListener("submit", validarForm);
 
 function validarForm(e){
   e.preventDefault();
-
-  alert ("Formulario enviado! Muchas gracias");
+  let nombre = document.getElementById("nombreYapellido").value;
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Formulario enviado correctamente! Muchas gracias' + " " + nombre,
+    showConfirmButton: false,
+    timer: 1500
+  })
 
   let resetBtn = document.getElementById("btnRes");
 
