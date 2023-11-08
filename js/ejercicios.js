@@ -7,7 +7,7 @@ class Ejercicio{
   }
 
 
-  const Ejercicios = [{nombre: "remo Horizontal", musculo: "espalda", dificultad:"baja"},
+const Ejercicios = [{nombre: "remo Horizontal", musculo: "espalda", dificultad:"baja"},
                     {nombre: "serrucho con mancuerna", musculo: "espalda", dificultad:"media"},
                     {nombre: "press de  Banca", musculo: "pecho", dificultad:"media"},
                     {nombre: "cruces de Poleas", musculo: "pecho", dificultad:"alta"},
@@ -23,20 +23,19 @@ class Ejercicio{
                     {nombre: "skullcrasher", musculo: "triceps", dificultad:"alta"}];
 
   
-  document.getElementById("busqueda");
-  const musculosinput = document.getElementById("busquedaInput");
-  const boton = document.getElementsByClassName("busquedaBoton");
-  const filtroMusc = Ejercicios.filter((Ejercicios)=> Ejercicios.musculo.includes(musculosinput));
-  const filtroDif = Ejercicios.filter((Ejercicios)=> Ejercicios.dificultad.includes(musculosinput));
-  
-  boton.onclick = busqueda ;
-  
-  //NO EJECUTA LA FUNCION DE BUSQUEDA, POR QUE¿?
-  function busqueda (e) {
-    
+const formBusqueda = document.getElementById("busqueda");
+const musculosinput = document.getElementById("busquedaInput");
+const boton = document.getElementsByClassName("busquedaBoton");
+const filtroMusc = Ejercicios.filter((Ejercicios)=> Ejercicios.musculo.includes(musculosinput));
+const filtroDif = Ejercicios.filter((Ejercicios)=> Ejercicios.dificultad.includes(musculosinput));
+
+formBusqueda.onclick = busqueda;
+
+//NO EJECUTA LOS ALERTS, POR QUE ¿?
+function busqueda (e) {
     e.preventDefault();
 
-    if(musculosinput == "espalda" || musculosinput == "pecho" || musculosinput == "cuadricep" || musculosinput == "femorales" || musculosinput == "gluteos" || musculosinput == "hombro" || musculosinput == "biceps" || musculosinput == "triceps"){
+    if(musculosinput === "espalda" || musculosinput === "pecho" || musculosinput === "cuadricep" || musculosinput === "femorales" || musculosinput === "gluteos" || musculosinput === "hombro" || musculosinput === "biceps" || musculosinput === "triceps"){
         let ejerciciosNombreMsg = "";
         filtroMusc.forEach((el) => {
             ejerciciosNombreMsg += `${ el.nombre }\n`
@@ -48,10 +47,7 @@ class Ejercicio{
             ejerciciosDifMsg += `${el.nombre}\n`
         })
         alert(ejerciciosDifMsg);
-    } else {
-        alert("Ingrese un valor valido");
     }
-  }
+};
 
 
- 
