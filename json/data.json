@@ -1,0 +1,16 @@
+[   
+    {"nombre": "remo Horizontal", "musculo": "espalda", "dificultad":"baja"},
+    {"nombre": "serrucho con mancuerna", "musculo": "espalda", "dificultad":"media"},
+    {"nombre": "press de  Banca", "musculo": "pecho", "dificultad":"media"},
+    {"nombre": "cruces de Poleas", "musculo": "pecho", "dificultad":"alta"},
+    {"nombre": "sentadilla libre", "musculo": "cuadricep","dificultad":"media"},
+    {"nombre": "estocadas con mancuernas","musculo":  "cuadriceps", "dificultad":"media"},
+    {"nombre": "peso Muerto"," musculo": "femorales", "dificultad":"media"},
+    {"nombre": "hipThrust", "musculo": "gluteos", "dificultad":"media"},
+    {"nombre": "press Militar", "musculo": "hombro", "dificultad":"media"},
+    {"nombre": "vuelo lateral", "musculo": "hombro" , "dificultad":"baja"},
+    {"nombre": "curl bicep con barra", "musculo": "biceps", "dificultad":"baja"},
+    {"nombre": "curl concentrado", "musculo": "biceps", "dificultad":"baja"},
+    {"nombre": "extension con soga", "musculo": "triceps", "dificultad":"media"},
+    {"nombre": "skullcrasher", "musculo": "triceps", "dificultad":"alta"}
+]
