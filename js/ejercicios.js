@@ -1,5 +1,4 @@
-//LLAMO AL FETCH DEL ARCHIVO .JSON NO ME ENCUENTRA EL ARCHIVO ¿?
-let response = fetch(`./data.json`);
+
 
 //FORMULARIO
 const formBusqueda = document.getElementById("busqueda");
@@ -10,6 +9,8 @@ document.getElementById("busquedaBoton").addEventListener("click" , async (e) =>
 
     //INPUT DONDE INGRESAMOS QUÉ BUSCAR
     const musculosinput = document.getElementById("busquedaInput");
+    //LLAMO AL FETCH DEL ARCHIVO .JSON NO ME ENCUENTRA EL ARCHIVO ¿?
+    let response = await fetch(`./data.json`);
     //CONVIERTO LA RESPUESTA A .JSON()
     let data = await response.json();
     //FILTRADO
