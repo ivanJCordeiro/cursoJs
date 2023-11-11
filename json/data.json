@@ -1,4 +1,4 @@
-[   
+{  "ejercicios":[
     {"nombre": "remo Horizontal", "musculo": "espalda", "dificultad":"baja"},
     {"nombre": "serrucho con mancuerna", "musculo": "espalda", "dificultad":"media"},
     {"nombre": "press de  Banca", "musculo": "pecho", "dificultad":"media"},
@@ -12,5 +12,5 @@
     {"nombre": "curl bicep con barra", "musculo": "biceps", "dificultad":"baja"},
     {"nombre": "curl concentrado", "musculo": "biceps", "dificultad":"baja"},
     {"nombre": "extension con soga", "musculo": "triceps", "dificultad":"media"},
-    {"nombre": "skullcrasher", "musculo": "triceps", "dificultad":"alta"}
-]
+    {"nombre": "skullcrasher", "musculo": "triceps", "dificultad":"alta"}]
+}

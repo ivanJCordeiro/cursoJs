@@ -1,5 +1,5 @@
 //LLAMO AL FETCH DEL ARCHIVO .JSON NO ME ENCUENTRA EL ARCHIVO ¿?
-let response = fetch(`./data.json`)
+let response = fetch(`./data.json`);
 
 //FORMULARIO
 const formBusqueda = document.getElementById("busqueda");
