@@ -7,27 +7,41 @@ document.getElementById("busquedaBoton").addEventListener("click" , async (e) =>
 
     //INPUT DONDE INGRESAMOS QUÉ BUSCAR
     const musculosinput = document.getElementById("busquedaInput");
-    //LLAMO AL FETCH DEL ARCHIVO .JSON NO ME ENCUENTRA EL ARCHIVO ¿?
+    //LLAMO AL FETCH DEL ARCHIVO .JSON
     let response = await fetch(`../json/data.json`);
     //CONVIERTO LA RESPUESTA A .JSON()
     let data = await response.json();
-    //FILTRADO
-    let filtroMusc = data.filter((data)=> data.musculo.includes(musculosinput.value));
-    let filtroDif = data.filter((data)=> data.dificultad.includes(musculosinput.value));
+    //FILTRADO FILTER IS NOT A FUNCTION ¿?
+    let filtroMusc = data.filter((el)=> el.musculo.includes(musculosinput.value));
+    let filtroDif = data.filter((el)=> el.dificultad.includes(musculosinput.value));
 
     //CONDICIONAL PARA CADA CASO DE RESPUESTA
-    if(musculosinput === "espalda" || musculosinput === "pecho" || musculosinput === "cuadricep" || musculosinput === "femorales" || musculosinput === "gluteos" || musculosinput === "hombro" || musculosinput === "biceps" || musculosinput === "triceps"){
+    if(
+        musculosinput.value === "espalda" ||
+        musculosinput.value === "pecho" || 
+        musculosinput.value === "cuadricep" ||
+        musculosinput.value === "femorales" ||
+        musculosinput.value === "gluteos" ||
+        musculosinput.value === "hombro" ||
+        musculosinput.value === "biceps" ||
+        musculosinput.value === "triceps"
+    ){
+
         let ejerciciosNombreMsg = "";
         filtroMusc.forEach((el) => {
             ejerciciosNombreMsg += `${ el.nombre }\n`
         })
         console.log(ejerciciosNombreMsg);
-    } else if (musculosinput === "baja" || musculosinput === "media" || musculosinput === "alta") {
-        let ejerciciosDifMsg = "";
-        filtroDif.forEach ((el) => {
-            ejerciciosDifMsg += `${el.nombre}\n`
-        })
-        console.log(ejerciciosDifMsg);
-    }
+    } else if (
+                musculosinput === "baja" ||
+                musculosinput === "media" ||
+                musculosinput === "alta"
+            ){
+            let ejerciciosDifMsg = "";
+            filtroDif.forEach ((el) => {
+                ejerciciosDifMsg += `${el.nombre}\n`
+            })
+            console.log(ejerciciosDifMsg);
+        }
 });
 
